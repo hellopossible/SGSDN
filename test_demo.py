@@ -28,7 +28,7 @@ def select_model(args, device):
         model = EFDN()
         model.load_state_dict(torch.load(model_path), strict=True)
     elif model_id == 18:
-        from models.team01_SGSDN import SGSDN
+        from models.team18_SGSDN import SGSDN
         name, data_range = f"{model_id:02}_SGSDN", 1.0 # You can choose either 1.0 or 255.0 based on your own model
         model_path = os.path.join('model_zoo', 'team18_SGSDN.pth')
         model = SGSDN()
